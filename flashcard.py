@@ -166,7 +166,7 @@ def next():
     
 def answerss():
     if my_entry.get().capitalize() == words[random_woord][2]:#2 is the tuple in the list where the answer in eng translate
-        answer_label.configure(text=f"Correct! {words[random_woord][0]} is {words[random_woord[2]]}!", text_color = "green") #if the answer is correct, then display "Correct!" in green
+        answer_label.configure(text=f"Correct! {words[random_woord][0]} is {words[random_woord][2]}!", text_color = "green") #if the answer is correct, then display "Correct!" in green
     else:
         answer_label.configure(text=f"Incorrect! {words[random_woord][0]} is {words[random_woord][2]}!", text_color = "red") #if the answer is incorrect, then display "Incorrect!" in red
         
