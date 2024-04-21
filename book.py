@@ -49,7 +49,6 @@ class Book():
     def get_language(self) -> str:
         return self.language
 
-#Feature 9: Status of the book
     def get_status(self) -> str:
         return self.status
 
@@ -64,6 +63,28 @@ class Book():
 #Feature 12: Number of copies available
     def get_number_of_copies_available(self) -> int: #type hinting to tell the function to return an integer
         return self.number_of_copies_available
+    
+    #---------------------------------------------SETTER METHODS---------------------------------------------
+    
+    #This method is actually a setter method, since we know that the status of the book can change.
+#Feature 9: Status of the book
+    def set_status(self, new_status : str) -> str: #this time we have str inside a method beacuse we are passing a string as an argument
+        if new_status in ["Available", "Checked Out", "Lost", "Under Repair", "Not Available", "Reserved"]:
+            self.status = new_status
+            print(f"The status of the book has been updated to {new_status}.")
+        else:
+            print("Invalid status. Please enter a valid status.")
+            
+            
+    def set_rating(self, new_rating : float) -> float:
+        self.rating = new_rating
+        
+    
+    
+    
+    
+    
+    
 
 #we use a different method for returning string because of encapsulation rules
     def __str__(self) -> str: #-> str is a type hint that tells the function to return a string
